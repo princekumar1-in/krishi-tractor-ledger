@@ -136,8 +136,34 @@ LANG_DICT = {
         "role_label": "Choose Profile Role:",
         "role_f": "Farmer (Manage Sowing/Farming Cost)", "role_t": "Tractor Owner (Manage Tractor Commercial Work)", "role_b": "Farmer + Tractor Owner",
         "save_enter_btn": "SAVE AND ENTER SYSTEM",
+        "menu_opt1": "🗂️ Manage Accounts Directory & Entries",
+        "menu_opt2": "👁️ Shared View Network Matrix",
+        "dir_header": "📁 Your Accounts Directory (Khate)",
+        "add_khata_exp": "➕ Add New Account Ledger (Naya Khata)",
+        "acc_name": "Account Holder Name:",
+        "acc_mob": "Account Holder Mobile Number:",
+        "acc_type": "Account Type Role:",
+        "create_node_btn": "CREATE ACCOUNT VIRTUAL NODE",
+        "select_khata_label": "🎯 Choose Account to Add Entry:",
+        "entry_form_title": "📝 Entry Log Form For: ",
+        "work_date": "Work Date",
+        "area_label": "Area (Total Bigha / Acre):",
+        "rate_label": "Rate Per Unit (₹):",
+        "paid_label": "Amount Received/Paid (₹):",
+        "details_label": "Work Details / Notes:",
+        "commit_btn": "COMMIT TRANSACTION TO THIS ACCOUNT",
+        "personal_entries_title": "📊 Personal Entries in {}'s Ledger",
+        "wipe_btn": "🗑️ Wipe Entry Record",
+        "shared_title": "👁️ Shared Network Matrix View (Live Sync)",
+        "shared_info": "🔒 Security Lock: Entries published by other users connected to your phone number are Read-Only.",
+        "shared_empty": "No external users have logged any data linking to your mobile number yet.",
+        "stat_total": "🌍 Network Total Cost",
+        "stat_paid": "🟩 Network Settled Amount",
+        "stat_due": "🟥 Network Due Calculation",
+        "signout_btn": "🔒 SECURE TERMINAL SIGN OUT CONNECTION",
         "error_mob": "Please enter a valid 10-digit mobile number.", "error_fields": "All fields are required!",
-        "error_self": "You cannot register your own mobile number here.", "toast_success": "Record logged successfully!"
+        "error_self": "You cannot register your own mobile number here.", "toast_success": "Record logged successfully!",
+        "details_lbl": "Details:", "param_lbl": "Parameters:"
     },
     "Hindi": {
         "title": "🚜 कृषि और ट्रैक्टर लेजर सिस्टम",
@@ -149,12 +175,39 @@ LANG_DICT = {
         "role_label": "अपना काम/प्रोफाइल चुनें:",
         "role_f": "किसान (Farmer)", "role_t": "ट्रैक्टर मालिक (Tractor Owner)", "role_b": "किसान + ट्रैक्टर मालिक",
         "save_enter_btn": "प्रोफाइल सेव करके ऐप में जाएं",
+        "menu_opt1": "🗂️ खाते (Directory) और नई एंट्री डालें",
+        "menu_opt2": "👁️ शेयर्ड नेटवर्क (दूसरों ने क्या एंट्री डाली)",
+        "dir_header": "📁 आपके खाते (Ledger Directory)",
+        "add_khata_exp": "➕ नया खाता जोड़ें (Create New Account)",
+        "acc_name": "खाता धारक का नाम:",
+        "acc_mob": "खाता धारक का मोबाइल नंबर:",
+        "acc_type": "खाते का प्रकार (Role):",
+        "create_node_btn": "नया खाता (Directory) सेव करें",
+        "select_khata_label": "🎯 एंट्री करने के लिए खाता चुनें:",
+        "entry_form_title": "📝 नया हिसाब फॉर्म किसके लिए: ",
+        "work_date": "काम की तारीख",
+        "area_label": "कुल जमीन (बीघा / एकड़):",
+        "rate_label": "रेट प्रति बीघा (₹):",
+        "paid_label": "एडवांस / दिया हुआ पैसा (₹):",
+        "details_label": "काम की जानकारी (जैसे: नरमा बुवाई, गेहूं जुताई):",
+        "commit_btn": "इस खाते में एंट्री पक्की (Save) करें",
+        "personal_entries_title": "📊 {} के खाते में आपकी डाली गई एंट्रियां",
+        "wipe_btn": "🗑️ एंट्री डिलीट करें",
+        "shared_title": "👁️ शेयर्ड नेटवर्क मैट्रिक्स (लाइव सिंक व्यू)",
+        "shared_info": "🔒 सुरक्षा लॉक: सामने वाले व्यक्ति ने जो एंट्री डाली है उसे आप सिर्फ देख सकते हैं, बदल नहीं सकते।",
+        "shared_empty": "अभी तक किसी भी ट्रैक्टर मालिक या किसान ने आपके मोबाइल नंबर पर कोई लाइव एंट्री नहीं डाली है।",
+        "stat_total": "🌍 नेटवर्क कुल काम लागत",
+        "stat_paid": "🟩 नेटवर्क कुल चुकता राशि",
+        "stat_due": "🟥 नेटवर्क कुल बाकी पैसा",
+        "signout_btn": "🔒 अकाउंट लॉग आउट (Sign Out) करें",
         "error_mob": "कृपया सही 10 अंकों का mobile number डालें।", "error_fields": "सभी जानकारी भरना अनिवार्य है!",
-        "error_self": "आप अपना खुद का नंबर यहाँ रजिस्टर नहीं कर सकते।", "toast_success": "रिकॉर्ड सफलतापूर्वक सेव हो गया!"
+        "error_self": "आप अपना खुद का नंबर यहाँ रजिस्टर नहीं कर सकते।", "toast_success": "रिकॉर्ड सफलतापूर्वक सेव हो गया!",
+        "details_lbl": "विवरण / नोट:", "param_lbl": "पैरामीटर:"
     }
 }
 
 if "app_lang" not in st.session_state: st.session_state["app_lang"] = "English"
+if "selected_entry_id" not in st.session_state: st.session_state["selected_entry_id"] = None
 
 col_lang, _ = st.columns([1, 4])
 with col_lang:
@@ -187,7 +240,7 @@ if not st.session_state["farm_logged_in"]:
                         st.session_state["user_name"] = user_data[0]
                         st.session_state["user_role"] = user_data[1]
                         st.rerun()
-                    else: st.error("Invalid credentials!")
+                    else: st.error("Wrong Username / Password!")
                 else: st.error(L["error_mob"])
         elif auth_choice == L["register_tab"]:
             st.subheader(L["reg_header"])
@@ -216,11 +269,72 @@ if current_role == "None":
         st.rerun()
     st.stop()
 
-# --- PHASE 3: CORE APPLICATION ROUTING ---
-st.title(f"{L['title']} [{st.session_state['user_role'].upper()}]")
-st.markdown(f"User: **{st.session_state['user_name']} ({current_mobile})**")
-st.markdown("---")
+# ----------------------------------------------------
+#            DYNAMIC DUAL PAGE VIEW MANAGER
+# ----------------------------------------------------
+if st.session_state["selected_entry_id"] is not None:
+    # Dedicated Sub-Page Mode for Entry Inspection Node
+    t_id = st.session_state["selected_entry_id"]
+    conn = sqlite3.connect(FARM_DB)
+    c = conn.cursor()
+    c.execute("SELECT * FROM work_records WHERE id=?", (t_id,))
+    row = c.fetchone()
+    conn.close()
 
+    if not row:
+        st.error("Entry record parameters missing.")
+        if st.button("⬅️ Back to Main Screen", type="secondary"):
+            st.session_state["selected_entry_id"] = None
+            st.rerun()
+    else:
+        st.title("📄 Detailed Transaction Node System")
+        st.markdown(f"**Record Core Identity Token:** `NODE-RE-00{row[0]}`")
+        st.markdown("---")
+
+        # Visual Grid representation separating receipt architecture
+        box1, box2 = st.columns(2)
+        with box1:
+            st.info(f"📅 **Date:** {row[4]}\n\n📋 **Category Type:** {row[5]}")
+            if row[5] == "Work Entry":
+                st.success(f"📐 **Area Covered:** {row[6]} Bigha\n\n💰 **Rate Standard:** ₹{row[7]}/Unit")
+        with box2:
+            st.warning(f"💵 **Calculated Total Cost:** ₹{row[8]:,}\n\n🟩 **Amount Logged Settled:** ₹{row[9]:,}\n\n📝 **Notes Description:** {row[11]}")
+
+        st.markdown("---")
+        
+        # Check permissions to show edit panels exclusively to creator nodes
+        if row[1] == current_mobile:
+            st.subheader("🛠️ Operations Update Control Matrix")
+            ch_bigha = st.number_input("Change Bigha Configuration Parameters:", value=float(row[6]), key=f"chb_{row[0]}")
+            ch_rate = st.number_input("Change Rate Configuration Parameters:", value=float(row[7]), key=f"chr_{row[0]}")
+            ch_paid = st.number_input("Change Settled Ledger Balance Parameters:", value=float(row[9]), key=f"chp_{row[0]}")
+            ch_notes = st.text_area("Change Entry Specific Descriptions:", value=row[11], key=f"chn_{row[0]}")
+
+            col_sub1, col_sub2 = st.columns(2)
+            with col_sub1:
+                if st.button("💾 Commit Permanent Save Node Updates", use_container_width=True, type="primary"):
+                    ch_tot = ch_bigha * ch_rate
+                    ch_status = "Paid" if row[5] == "Payment Entry" or ch_paid >= ch_tot else "Pending"
+                    update_farm_transaction(row[0], ch_bigha, ch_rate, ch_paid, ch_status, ch_notes, row[5])
+                    st.session_state["selected_entry_id"] = None
+                    st.toast("Changes Saved Successfully!")
+                    st.rerun()
+            with col_sub2:
+                if st.button("🗑️ Wipe Record From Network Grid Permanently", type="primary", use_container_width=True):
+                    delete_farm_transaction(row[0])
+                    st.session_state["selected_entry_id"] = None
+                    st.toast("Record Wiped!")
+                    st.rerun()
+        else:
+            st.info("🔒 Secure Node Protection: This record belongs to another active user. Shared views are read-only framework meshes.")
+
+        st.markdown("---")
+        if st.button("⬅️ Drop Context and Return Home", use_container_width=True):
+            st.session_state["selected_entry_id"] = None
+            st.rerun()
+    st.stop()
+
+# --- PHASE 3: CORE APPLICATION INTERFACE ---
 # Global DB Directory Fetch for Dynamic UI Verification
 conn = sqlite3.connect(FARM_DB)
 v_df = pd.read_sql_query("SELECT id, target_mobile, target_name, target_type FROM virtual_accounts WHERE creator_mobile=?", conn, params=(current_mobile,))
@@ -249,7 +363,6 @@ if st.session_state["user_role"] == "Farmer":
         if df_self.empty:
             st.info("Aapne abhi tak koi entry data feed nahi kiya hai.")
         else:
-            # Dropdown filtering to parse separate metrics for specific tractor owners
             distinct_owners = df_self["owner_mobile"].unique()
             filter_owner = st.selectbox("Filter by Tractor Owner Ledger (Alag se hisab dekhein):", ["All Owners / Sabhi Ka Combo"] + list(distinct_owners))
             
@@ -259,25 +372,24 @@ if st.session_state["user_role"] == "Farmer":
 
             t_cost = df_filtered["total_amount"].sum()
             t_paid = df_filtered["paid_amount"].sum()
-            st.metric("💰 Total cost Logged (कुल खर्चा)", f"₹{t_cost:,}")
-            st.metric("🟩 Total Paid Outflow (दिया गया एडवांस/भुगतान)", f"₹{t_paid:,}")
-            st.metric("🟥 Remaining Due Balance (शेष बकाया)", f"₹{(t_cost - t_paid):,}")
+            
+            col_m1, col_m2, col_m3 = st.columns(3)
+            col_m1.metric("💰 Total cost Logged (कुल खर्चा)", f"₹{t_cost:,}")
+            col_m2.metric("🟩 Total Paid Outflow (भुगतान)", f"₹{t_paid:,}")
+            col_m3.metric("🟥 Remaining Due Balance (शेष बकाया)", f"₹{(t_cost - t_paid):,}")
 
             st.markdown("---")
+            st.subheader("🗂️ Available Records Node List (Click to open full page)")
             for i, r in df_filtered.sort_values(by="date", ascending=False).iterrows():
-                with st.expander(f"🗓️ {r['date']} | Mode: {r['entry_mode']} | Net Cost: ₹{r['total_amount']:,} | Settled: ₹{r['paid_amount']:,}"):
-                    st.write(f"🚜 **Details:** {r['notes']}")
-                    if r['entry_mode'] == "Work Entry":
-                        st.write(f"📐 Parameters: {r['area_bigha']} Bigha @ ₹{r['rate_per_bigha']}/Bigha")
-                    st.write(f"📱 Connected Tractor Node: {r['owner_mobile']}")
-                    st.markdown("<span style='color: gray; font-size: 0.85em;'>🔒 Secure Mode: Read-Only System</span>", unsafe_allow_html=True)
+                if st.button(f"📄 Date: {r['date']} | Mode: {r['entry_mode']} | Net Cost: ₹{r['total_amount']:,} | Owner: {r['owner_mobile']} ➡️", key=f"rec_self_{r['id']}", use_container_width=True):
+                    st.session_state["selected_entry_id"] = r['id']
+                    st.rerun()
 
     elif f_menu.startswith("👁️ Option 2"):
         st.subheader("👁️ Tractor Owners Shared Grid Logs")
         st.info("🔒 Security Layer: Saamne wale tractor maalik ne aapka number daal kar jo entries ki hain, wo yahan bina badlaav ke dikhengi.")
 
         conn = sqlite3.connect(FARM_DB)
-        # Fetch instances where other tractor owners injected records against this farmer mobile number
         df_shared = pd.read_sql_query("SELECT * FROM work_records WHERE created_by_mobile != ? AND farmer_mobile = ?", conn, params=(current_mobile, current_mobile))
         conn.close()
 
@@ -297,12 +409,11 @@ if st.session_state["user_role"] == "Farmer":
             col_st2.metric("🟩 Tractor Claimed Received (सामने वाले के अनुसार मिला पैसा)", f"₹{s_paid:,}")
             
             st.markdown("---")
+            st.subheader("🗂️ Network Records Node List (Click to view full page)")
             for i, r in df_pub_filtered.sort_values(by="date", ascending=False).iterrows():
-                with st.expander(f"📥 Node Link: {r['date']} | Mode: {r['entry_mode']} | Total: ₹{r['total_amount']:,}"):
-                    st.write(f"🌾 **Log Note:** {r['notes']}")
-                    if r['entry_mode'] == "Work Entry":
-                        st.write(f"📐 Metrics: {r['area_bigha']} Bigha @ ₹{r['rate_per_bigha']}/Unit")
-                    st.markdown("<span style='color: #4A90E2; font-size: 0.85em;'>🔒 Network Protection: Read-Only Synced Node</span>", unsafe_allow_html=True)
+                if st.button(f"📥 Shared Entry: {r['date']} | Mode: {r['entry_mode']} | Total Value: ₹{r['total_amount']:,} ➡️", key=f"rec_sh_{r['id']}", use_container_width=True):
+                    st.session_state["selected_entry_id"] = r['id']
+                    st.rerun()
 
     elif f_menu.startswith("📝 Option 3"):
         st.subheader("📝 Accounts Directory Setup & Log Factory")
@@ -330,7 +441,6 @@ if st.session_state["user_role"] == "Farmer":
             t_v_mob = selected_node.split("(")[1].split(")")[0]
             matched_row = v_df[v_df["target_mobile"] == t_v_mob].iloc[0]
             
-            # Directory Entry modification controllers
             e_name = st.text_input("Modify Selected Name:", value=matched_row["target_name"], key=f"ed_n_{matched_row['id']}")
             e_mob = st.text_input("Modify Selected Mobile:", value=matched_row["target_mobile"], max_chars=10, key=f"ed_m_{matched_row['id']}")
             
@@ -359,7 +469,7 @@ if st.session_state["user_role"] == "Farmer":
                     b_input = st.number_input("Total Bigha Area:", min_value=0.1, step=0.5)
                     r_input = st.number_input("Rate Per Bigha (₹):", min_value=1.0, step=50.0)
                     p_input = 0.0
-                else: # Payment entry
+                else:
                     b_input, r_input = 0.0, 0.0
                     p_input = st.number_input("Paid Amount (INR ₹):", min_value=1.0, step=100.0)
                 
@@ -380,8 +490,7 @@ if st.session_state["user_role"] == "Farmer":
                 st.toast(L["toast_success"], icon="✅")
                 st.rerun()
 
-            # Personal statement listing created inside this targeted sub account node
-            st.markdown(f"#### Your Created Logs in {matched_row['target_name']}'s Khata")
+            st.markdown(f"#### Your Created Logs in {matched_row['target_name']}'s Khata (Click to open full sub-page)")
             conn = sqlite3.connect(FARM_DB)
             df_entries = pd.read_sql_query("SELECT * FROM work_records WHERE created_by_mobile=? AND owner_mobile=?", conn, params=(current_mobile, t_v_mob))
             conn.close()
@@ -389,44 +498,9 @@ if st.session_state["user_role"] == "Farmer":
             if df_entries.empty: st.info("No logs generated under this registry node context yet.")
             else:
                 for idx, row in df_entries.sort_values(by="date", ascending=False).iterrows():
-                    with st.expander(f"⚙️ Log: {row['date']} | Type: {row['entry_mode']} | Net Cost: ₹{row['total_amount']:,} | Settled: ₹{row['paid_amount']:,}"):
-                        st.write(f"📝 **Notes:** {row['notes']}")
-                        
-                        st.markdown("---")
-                        ec, dc = st.columns(2)
-                        with ec:
-                            if st.button("✏️ Edit Entry Parameters", key=f"f_ed_ent_{row['id']}", use_container_width=True):
-                                st.session_state[f"f_edit_pan_{row['id']}"] = True
-                        with dc:
-                            if st.button("🗑️ Erase Log", key=f"f_del_ent_{row['id']}", type="primary", use_container_width=True):
-                                delete_farm_transaction(row['id'])
-                                st.toast("Record erased!")
-                                st.rerun()
-
-                        if f"f_edit_pan_{row['id']}" in st.session_state and st.session_state[f"f_edit_pan_{row['id']}"]:
-                            st.markdown("##### Update Ledger Context Operations")
-                            if row['entry_mode'] == "Work Entry":
-                                ch_b = st.number_input("Modify Bigha:", value=float(row['area_bigha']), key=f"chb_{row['id']}")
-                                ch_r = st.number_input("Modify Rate:", value=float(row['rate_per_bigha']), key=f"chr_{row['id']}")
-                                ch_p = 0.0
-                            else:
-                                ch_b, ch_r = 0.0, 0.0
-                                ch_p = st.number_input("Modify Payment:", value=float(row['paid_amount']), key=f"chp_{row['id']}")
-                            
-                            ch_n = st.text_area("Modify Notes:", value=row['notes'], key=f"chn_{row['id']}")
-                            
-                            s_btn, c_btn = st.columns(2)
-                            with s_btn:
-                                if st.button("Commit Save", key=f"c_sv_{row['id']}", use_container_width=True):
-                                    ch_tot = ch_b * ch_r
-                                    ch_stat = "Paid" if row['entry_mode'] == "Payment Entry" or ch_p >= ch_tot else "Pending"
-                                    update_farm_transaction(row['id'], ch_b, ch_r, ch_p, ch_stat, ch_n, row['entry_mode'])
-                                    st.session_state[f"f_edit_pan_{row['id']}"] = False
-                                    st.rerun()
-                            with c_btn:
-                                if st.button("Drop", key=f"dr_p_{row['id']}", use_container_width=True):
-                                    st.session_state[f"f_edit_pan_{row['id']}"] = False
-                                    st.rerun()
+                    if st.button(f"⚙️ Log Variant: {row['date']} | Type: {row['entry_mode']} | Net Value: ₹{row['total_amount'] if row['total_amount'] > 0 else row['paid_amount']:,} ➡️", key=f"f_sub_page_click_{row['id']}", use_container_width=True):
+                        st.session_state["selected_entry_id"] = row['id']
+                        st.rerun()
 
 else:
     # ----------------------------------------------------
@@ -502,7 +576,7 @@ else:
             st.toast(L["toast_success"], icon="✅")
             st.rerun()
 
-        st.markdown(f"#### {L['personal_entries_title'].format(target_active_name)}")
+        st.markdown(f"#### {L['personal_entries_title'].format(target_active_name)} (Click to view full page)")
         conn = sqlite3.connect(FARM_DB)
         entries_df = pd.read_sql_query("SELECT * FROM work_records WHERE created_by_mobile=? AND farmer_mobile=?", 
                                         conn, params=(current_mobile, target_active_mobile))
@@ -512,41 +586,9 @@ else:
             st.info("No records inside this account.")
         else:
             for index, r in entries_df.sort_values(by="date", ascending=False).iterrows():
-                with st.expander(f"🗓️ {r['date']} | Total: ₹{r['total_amount']:,} | Received: ₹{r['paid_amount']:,} | [{r['status']}]"):
-                    st.write(f"📝 **{L['details_lbl']}** {r['notes']}")
-                    st.write(f"🚜 {L['param_lbl']} {r['area_bigha']} Bigha @ ₹{r['rate_per_bigha']}/Unit")
-                    
-                    st.markdown("---")
-                    e_col, d_col = st.columns(2)
-                    with e_col:
-                        if st.button("✏️ Edit Entry Parameters", key=f"t_ed_btn_{r['id']}", use_container_width=True):
-                            st.session_state[f"t_edit_panel_{r['id']}"] = True
-                    with d_col:
-                        if st.button(L["wipe_btn"], key=f"t_del_krishi_{r['id']}", type="primary", use_container_width=True):
-                            delete_farm_transaction(r['id'])
-                            st.toast("Wiped!")
-                            st.rerun()
-                            
-                    if f"t_edit_panel_{r['id']}" in st.session_state and st.session_state[f"t_edit_panel_{r['id']}"]:
-                        st.markdown("##### Modify Entry Metrics")
-                        ch_bigha = st.number_input("Change Bigha:", value=float(r['area_bigha']), key=f"chb_t_{r['id']}")
-                        ch_rate = st.number_input("Change Rate:", value=float(r['rate_per_bigha']), key=f"chr_t_{r['id']}")
-                        ch_paid = st.number_input("Change Paid Amount:", value=float(r['paid_amount']), key=f"chp_t_{r['id']}")
-                        ch_notes = st.text_area("Change Notes:", value=r['notes'], key=f"chn_t_{r['id']}")
-                        
-                        sv_c, dr_c = st.columns(2)
-                        with sv_c:
-                            if st.button("Save Changes", key=f"sv_ent_t_{r['id']}", use_container_width=True):
-                                ch_tot = ch_bigha * ch_rate
-                                ch_status = "Paid" if ch_paid >= ch_tot else "Pending"
-                                update_farm_transaction(r['id'], ch_bigha, ch_rate, ch_paid, ch_status, ch_notes, r['entry_mode'])
-                                st.session_state[f"t_edit_panel_{r['id']}"] = False
-                                st.toast("Updated!")
-                                st.rerun()
-                        with dr_c:
-                            if st.button("Cancel", key=f"cn_ent_t_{r['id']}", use_container_width=True):
-                                st.session_state[f"t_edit_panel_{r['id']}"] = False
-                                st.rerun()
+                if st.button(f"🚜 Log Statement: {r['date']} | Total: ₹{r['total_amount']:,} | Received: ₹{r['paid_amount']:,} ➡️", key=f"t_sub_page_click_{r['id']}", use_container_width=True):
+                    st.session_state["selected_entry_id"] = r['id']
+                    st.rerun()
 
     # Shared Network Matrix rendering logic block for Tractor Profiles
     st.markdown("---")
@@ -558,11 +600,9 @@ else:
     if shared_df.empty: st.info(L["shared_empty"])
     else:
         for idx, row in shared_df.sort_values(by="date", ascending=False).iterrows():
-            with st.expander(f"📥 Entry by Kisan Node ({row['created_by_mobile']}) | Date: {row['date']} | Total: ₹{row['total_amount']:,}"):
-                st.markdown(f"**🌾 Log Description Note:** {row['notes']}")
-                if row['entry_mode'] == "Work Entry":
-                    st.markdown(f"**📊 System Metrics:** {row['area_bigha']} Bigha @ ₹{row['rate_per_bigha']}/Unit rate calculation.")
-                st.markdown("<span style='color: #4A90E2; font-size: 0.85em;'>🔒 Secure Live Sync Framework (Read-Only Mode)</span>", unsafe_allow_html=True)
+            if st.button(f"📥 Synced Kisan Node Entry ({row['created_by_mobile']}) | Date: {row['date']} | Net Total: ₹{row['total_amount'] if row['total_amount'] > 0 else row['paid_amount']:,} ➡️", key=f"sh_trac_click_{row['id']}", use_container_width=True):
+                st.session_state["selected_entry_id"] = row['id']
+                st.rerun()
 
 st.markdown("---")
 if st.button(L["signout_btn"], type="primary", use_container_width=True):
