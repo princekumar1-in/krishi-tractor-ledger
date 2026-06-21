@@ -202,7 +202,7 @@ LANG_DICT = {
         "wipe_btn": "🗑️ एंट्री डिलीट करें",
         "shared_title": "👁️ शेयर्ड नेटवर्क मैट्रिक्स (लाइव सिंक व्यू)",
         "shared_info": "🔒 सुरक्षा लॉक: सामने वाले व्यक्ति ने जो एंट्री डाली है उसे आप सिर्फ देख सकते हैं, बदल नहीं सकते।",
-        "shared_empty": "अभी तक किसी भी ट्रैक्टर मालिक या किमान ने आपके मोबाइल नंबर पर कोई लाइव एंट्री नहीं डाली है।",
+        "shared_empty": "अभी तक किसी भी ट्रैक्टर मालिक या किसान ने आपके मोबाइल नंबर पर कोई लाइव एंट्री नहीं डाली है।",
         "stat_total": "🌍 नेटवर्क कुल काम लागत",
         "stat_paid": "🟩 नेटवर्क कुल चुकता राशि",
         "stat_due": "🟥 नेटवर्क कुल बाकी पैसा",
@@ -583,8 +583,9 @@ else:
         if v_df.empty: st.info("Directory is empty.")
         else:
             st.markdown("---")
+            # FIXED NameError: changed 'directory_options' to 'acc_options'
             acc_options = [f"{r['target_name']} ({r['target_mobile']})" for i, r in v_df.iterrows()]
-            selected_account = st.selectbox(L["select_khata_label"], directory_options)
+            selected_account = st.selectbox(L["select_khata_label"], acc_options)
             
             target_active_mobile = selected_account.split("(")[1].split(")")[0]
             matched_row = v_df[v_df["target_mobile"] == target_active_mobile].iloc[0]
@@ -629,7 +630,7 @@ else:
                 conn.commit(); conn.close()
                 st.toast(L["toast_success"], icon="✅"); st.rerun()
 
-             # Personal Statements
+           # Personal Statements
             conn = sqlite3.connect(FARM_DB)
             entries_df = pd.read_sql_query("SELECT * FROM work_records WHERE created_by_mobile=? AND farmer_mobile=?", conn, params=(current_mobile, target_active_mobile))
             conn.close()
@@ -660,4 +661,10 @@ else:
                                 update_farm_transaction(r['id'], ch_bigha, ch_rate, ch_paid, ch_status, ch_notes, r['entry_mode'])
                                 st.session_state[f"t_edit_panel_{r['id']}"] = False; st.rerun()
                         with dr_c:
-                            if st.button("Cancel", key=f"cn_ent_t_{r['id']}", use_container_width=True): st.session_state[f"t_edit_panel_{r['id']}"] = False; st.rerun()
+                            if st.button("Cancel", key=f"cn_ent_t_{r['id']}", use_container_width=True): st.session_state[f"t_edit_panel_{r['id']}"] = False; r.rerun()
+
+st.markdown("---")
+if st.button(L["signout_btn"], type="primary", use_container_width=True):
+    st.session_state["farm_logged_in"] = False
+    st.session_state["current_page"] = "Home"
+    st.rerun()
