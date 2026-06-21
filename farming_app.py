@@ -629,7 +629,7 @@ else:
                 conn.commit(); conn.close()
                 st.toast(L["toast_success"], icon="✅"); st.rerun()
 
-            # Personal Statements
+             # Personal Statements
             conn = sqlite3.connect(FARM_DB)
             entries_df = pd.read_sql_query("SELECT * FROM work_records WHERE created_by_mobile=? AND farmer_mobile=?", conn, params=(current_mobile, target_active_mobile))
             conn.close()
@@ -637,3 +637,27 @@ else:
                 with st.expander(f"🗓️ {r['date']} | Mode: {r['entry_mode']} | Net: ₹{r['total_amount'] if r['total_amount'] > 0 else r['paid_amount']:,} | [{r['status']}]"):
                     st.write(f"📝 **Details:** {r['notes']}")
                     if r['entry_mode'] == "Work Entry": st.write(f"🚜 Parameters: {r['area_bigha']} Bigha @ ₹{r['rate_per_bigha']}/Unit")
+                    st.markdown("---")
+                    e_col, d_col = st.columns(2)
+                    with e_col:
+                        if st.button("✏️ Edit Entry Parameters", key=f"t_ed_btn_{r['id']}", use_container_width=True): st.session_state[f"t_edit_panel_{r['id']}"] = True
+                    with d_col:
+                        if st.button(L["wipe_btn"], key=f"t_del_krishi_{r['id']}", type="primary", use_container_width=True):
+                            delete_farm_transaction(r['id']); st.toast("Wiped!"); st.rerun()
+
+                    if f"t_edit_panel_{r['id']}" in st.session_state and st.session_state[f"t_edit_panel_{r['id']}"]:
+                        if r['entry_mode'] == "Work Entry":
+                            ch_bigha = st.number_input("Change Bigha:", value=float(r['area_bigha']), key=f"chb_t_{r['id']}")
+                            ch_rate = st.number_input("Change Rate:", value=float(r['rate_per_bigha']), key=f"chr_t_{r['id']}"); ch_paid = 0.0
+                        else:
+                            ch_bigha, ch_rate = 0.0, 0.0; ch_paid = st.number_input("Change Paid Amount:", value=float(r['paid_amount']), key=f"chp_t_{r['id']}")
+                        ch_notes = st.text_area("Change Notes:", value=r['notes'], key=f"chn_t_{r['id']}")
+                        sv_c, dr_c = st.columns(2)
+                        with sv_c:
+                            if st.button("Save Changes", key=f"sv_ent_t_{r['id']}", use_container_width=True):
+                                ch_tot = ch_bigha * ch_rate
+                                ch_status = "Paid" if r['entry_mode'] == "Payment Entry" or ch_paid >= ch_tot else "Pending"
+                                update_farm_transaction(r['id'], ch_bigha, ch_rate, ch_paid, ch_status, ch_notes, r['entry_mode'])
+                                st.session_state[f"t_edit_panel_{r['id']}"] = False; st.rerun()
+                        with dr_c:
+                            if st.button("Cancel", key=f"cn_ent_t_{r['id']}", use_container_width=True): st.session_state[f"t_edit_panel_{r['id']}"] = False; st.rerun()
